@@ -1,0 +1,4 @@
+django
+djangorestframework
+psycopg[binary]
+django-admin-sortable2
