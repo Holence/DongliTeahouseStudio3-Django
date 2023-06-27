@@ -11,7 +11,7 @@ class Text(models.Model):
         null=False,
     )
     
-    attachments = models.ManyToManyField(Attachment, blank=True)
+    attachments = models.ManyToManyField(Attachment, blank=True, related_name="texts")
 
     class Meta:
         ordering = ['index']

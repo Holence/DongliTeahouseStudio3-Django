@@ -9,5 +9,5 @@ class Concept(models.Model):
     childs = models.ManyToManyField("self", blank=True, symmetrical=False, related_name="parents")
     relatives = models.ManyToManyField("self", blank=True, symmetrical=True)
     
-    texts = models.ManyToManyField(Text, blank=True)
-    attachments = models.ManyToManyField(Attachment, blank=True)
+    texts = models.ManyToManyField(Text, blank=True, related_name="concepts")
+    attachments = models.ManyToManyField(Attachment, blank=True, related_name="concepts")

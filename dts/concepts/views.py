@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import viewsets, permissions
+from .models import Concept
+from .serializers import ConceptSerializer
 
-# Create your views here.
+class ConceptViewSet(viewsets.ModelViewSet):
+    queryset = Concept.objects.all()
+    serializer_class = ConceptSerializer
+    permission_classes = [permissions.IsAuthenticated]
