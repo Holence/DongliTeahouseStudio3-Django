@@ -12,6 +12,5 @@ router.register('attachments', AttachmentViewSet, basename="attachment")
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('token/', obtain_auth_token),
-    path('api-auth/', include('rest_framework.urls'))
+    path('token/', obtain_auth_token)
 ]
